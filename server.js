@@ -131,6 +131,12 @@ app.post("/articles/:id", function(req, res) {
     });
 });
 
+// Render main.handlebars
+app.get('/', function (req, res) {
+  res.render('home');
+});
+
+
 // Start the server
 app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");
